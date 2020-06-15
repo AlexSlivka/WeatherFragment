@@ -1,4 +1,4 @@
-package com.example.weatherfragment.ui.gallery;
+package com.example.weatherfragment.ui.changeCity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,17 +13,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.weatherfragment.R;
 
-public class GalleryFragment extends Fragment {
+public class ChangeCityFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private ChangeCityViewModel changeCityViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        changeCityViewModel =
+                ViewModelProviders.of(this).get(ChangeCityViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_change_city, container, false);
+        final TextView textView = root.findViewById(R.id.text_change_city);
+        changeCityViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

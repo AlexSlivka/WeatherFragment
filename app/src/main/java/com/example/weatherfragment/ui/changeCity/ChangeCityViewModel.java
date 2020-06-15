@@ -1,14 +1,14 @@
-package com.example.weatherfragment.ui.gallery;
+package com.example.weatherfragment.ui.changeCity;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class ChangeCityViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public ChangeCityViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is gallery fragment");
     }
